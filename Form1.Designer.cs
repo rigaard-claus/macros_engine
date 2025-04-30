@@ -28,13 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.Window;
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            button1.ForeColor = SystemColors.MenuHighlight;
+            button1.Location = new Point(69, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(97, 31);
+            button1.TabIndex = 0;
+            button1.Text = "Start";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Red;
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            button2.ForeColor = SystemColors.HighlightText;
+            button2.Location = new Point(69, 49);
+            button2.Name = "button2";
+            button2.Size = new Size(97, 31);
+            button2.TabIndex = 1;
+            button2.Text = "Stop";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // MacrosHands
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(373, 329);
+            ClientSize = new Size(248, 98);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Name = "MacrosHands";
             Text = "MacrosHands";
             Load += Form1_Load;
@@ -42,5 +72,8 @@
         }
 
         #endregion
+
+        private Button button1;
+        private Button button2;
     }
 }
